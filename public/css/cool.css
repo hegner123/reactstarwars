@@ -1,0 +1,196 @@
+li,p,h1,h2,h3,h4,h5,h6 {
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-image: url("../images/stars.jpg");
+}
+
+.action-display {
+  position: relative;
+  font-size: 2rem;
+  display: block;
+  height: 4rem;
+  top: -6rem;
+  margin-left: -3rem;
+}
+
+.arena-character {
+  display:flex;
+  justify-content: center;
+}
+
+.attack-button-div {
+  align-self: center;
+}
+
+.footer {
+  max-height:3rem;
+  height:3rem;
+  display:block;
+}
+
+.header {
+  color: white;
+  font-size:3rem;
+}
+
+.char-display {
+  min-height: 600px;
+}
+
+.box {
+  color:#ffffff;
+  list-style: none;
+  font-size:1rem;
+  padding:1rem;
+  background:black;
+  border:solid white 1px;
+}
+
+.box-box {
+  display: block;
+  max-height: 2rem;
+}
+
+.char-text {
+  color: white;
+  font-size:26px;
+}
+
+.user-chara-sel {
+  opacity: 0.5;
+}
+
+.character {
+  height: 200px;
+  width: 200px;
+  background:white;
+  border: solid black  1px ;
+}
+
+.character-image:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.character-big {
+  height: 600px;
+  width: 300px;
+  background:white;
+  border: solid black  1px ;
+}
+
+.btn {
+  background:white;
+  color:black;
+}
+
+.vs-img-div {
+  align-self: center;
+}
+
+.character-select-button {
+  padding: 20px;
+}
+
+.versus-text {
+  glyph-orientation-vertical: auto;
+}
+
+.attack-button {
+  padding: 20px;
+  background: red;
+}
+
+.win {
+  color: white;
+}
+
+.loss {
+  color: white;
+}
+
+.reset-button {
+  padding: 1rem;
+  position: absolute;
+  bottom:2rem;
+}
+
+.scoreboard {
+  padding: 1px;
+  background: black;
+  border: solid 5px white;
+  height: 15rem;
+}
+
+.user-hp {
+  position: absolute;
+  width: 100%
+}
+
+.comp-hp {
+  position: absolute;
+  width: 100%
+}
+
+.comp-hp-meter{
+  width:100%;
+  height: inherit;
+}
+
+.user-hp-meter {
+  width:100%;
+  height: inherit;
+}
+
+.user-img-text {
+  color:white;
+}
+
+.star-wars {
+  /* Flexbox to center the entire element on the screen */
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 100px;
+  height: 400px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One' !important;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.crawl {
+  /* Position the element so we can adjust the top property in the animation */
+  cursor: pointer;
+  position: relative;
+  font-size:40px;
+  /* Making sure the text is fully off the screen at the start and end of the animation */
+  top: -600px;
+  /* Defines the skew origin at the very center when we apply transforms on the animation */
+  transform-origin: 50% 100%;
+  /* Adds the crawl animation, which plays for one minute */
+  animation: crawl 120s linear;
+  
+  animation-play-state:paused;
+  animation-iteration-count:infinite;
+}
+
+@keyframes crawl {
+  0% {
+    /* The element starts below the screen */
+    top: 0px;
+    /* Rotate the text 20 degrees but keep it close to the viewer */
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% { 
+    /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
+    top: -6000px;
+    /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+
+}
