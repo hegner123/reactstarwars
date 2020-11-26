@@ -1,0 +1,7 @@
+.placeholder{
+  background-image: url('../../images/coolCharacters/bobbaFett-big.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding:50px;
+}

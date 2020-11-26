@@ -7,7 +7,7 @@ export default function characters(){
   return(
    <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-12">
               <div className="row">
             <CharacterCard/>
             <CharacterCard/>
