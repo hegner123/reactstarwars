@@ -1,27 +1,29 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './style.css'
 
-class Scroll extends React.Component {
+class Scroll extends Component {
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    this.state={
+      animate: false,
+      handleClick: this.handleClick.bind(this)
+    }
   }
-
-  handleClick() {
-    document.getElementByID('crawl').style.animationPlayState = "running"
+  handleClick(){
+    
+    let elms = document.getElementsByIdName("hello");
+    console.log(elms)
+    this.setState(state => ({
+      animate: !state.animate
+    }));
   }
-  // {this.state.isToggleOn ? 'ON' : 'OFF'}
+render() {
 
-  render() {
     return (
       <div className="">
-      <section id="star-wars" class="star-wars col col-2 float-left" >
-      <div class="crawl" id="crawl" onClick={this.handleClick}>
-      {/* {this.state.isToggleOn ? 'ON' : 'OFF'} */}
-        <div class="title">
+      <section id="star-wars " className="star-wars col col-2 float-left" >
+      <div className='crawl hello'id="crawl" onClick={this.state.handleClick}>
+        <div className="title">
           <br/>
           <br/>
           <br/>

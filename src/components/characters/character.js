@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react'
 import CharacterCard from './characterCard/characterCard'
 
 
-export default function characters(){
 
+class Characters extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      userCharacter:'',
+      npcCharacter:''
+      }
+    };
+
+render(){
   return(
    <div className="container">
           <div className="row">
@@ -19,3 +28,6 @@ export default function characters(){
    </div>
   )
 }
+}
+
+export default Characters

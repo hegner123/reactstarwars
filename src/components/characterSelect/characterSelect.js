@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react'
 import Characters from '../characters/character'
 import './style.css'
 
 
 
-export default function characterSelect(){
-
+class CharacterSelect extends Component{
+  constructor(props) {
+    super(props) 
+this.state={
+  name:''
+}
+    }
+  render(){
   return(
    <div className="container">
      <div className="row">
@@ -21,4 +27,8 @@ export default function characterSelect(){
         </div>
    </div>
   )
+  }
 }
+
+
+export default CharacterSelect;

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react'
 import './style.css'
 
-export default function characters(){
+class CharacterCard extends Component{
+
+    render(){
 
   return(
     <div className="col-md-6 col-3">
@@ -11,3 +13,6 @@ export default function characters(){
     </div>
   )
 }
+}
+
+export default CharacterCard;

@@ -1,11 +1,19 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './style.css'
 
-export default function header(){
-
+class Arena extends Component{
+state={
+  cast:''
+}
+render(){
   return(
-    <div className="text-white">
-      
+    <div>
+
     </div>
   )
 }
+}
+
+export default Arena
+
+
