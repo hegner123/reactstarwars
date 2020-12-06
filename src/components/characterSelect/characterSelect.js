@@ -8,15 +8,18 @@ class CharacterSelect extends Component{
   constructor(props) {
     super(props) 
 this.state={
-  name:''
+  name:"michael"
 }
     }
   render(){
+    
   return(
    <div className="container">
      <div className="row">
      <div className='col-12 col-md-8'>
-    <Characters/>
+    <Characters
+    characterObject={this.props.characterObject}
+    />
     </div>
     <div className="col-2 placeholder">
 

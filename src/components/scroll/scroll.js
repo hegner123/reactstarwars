@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './style.css'
+import {Crawl} from './style.js';
 
 class Scroll extends Component {
   constructor(props) {
@@ -10,9 +10,7 @@ class Scroll extends Component {
     }
   }
   handleClick(){
-    
-    let elms = document.getElementsByIdName("hello");
-    console.log(elms)
+    // console.log('click')
     this.setState(state => ({
       animate: !state.animate
     }));
@@ -22,7 +20,7 @@ render() {
     return (
       <div className="">
       <section id="star-wars " className="star-wars col col-2 float-left" >
-      <div className='crawl hello'id="crawl" onClick={this.state.handleClick}>
+      <Crawl  animation={this.state.animate} onClick={this.state.handleClick}>
         <div className="title">
           <br/>
           <br/>
@@ -36,7 +34,7 @@ render() {
           <h4>You will pick a character, and then procede to slaughter all the remaining characters regardless of
             their role in the plot.</h4>
         </div>
-      </div>
+        </Crawl>
     </section>
     </div>
     );
