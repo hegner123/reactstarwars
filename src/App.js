@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Header from './components/header/header'
-import Scroll from './components/scroll/scroll'
 import CharacterSelect from './components/characterSelect/characterSelect'
 import Arena from './components/arena/arena'
 import characterObject from './data/characters'
@@ -12,24 +11,49 @@ class App extends Component{
   constructor(props) {
     super(props);
     this.state={
-      userCharacter:'',
-      npcCharacter:'',
-      availableCharacters:[]
+    step: 'characterSelect',
+    userCharacter:'',
+    npcCharacter:'',
+    opponents: 4,
+    wins:0,
+    losses:0,
     }
+    this.assignUser = this.assignUser.bind(this);
+    this.assignNpc = this.assignNpc.bind(this);
   }
+
+  assignUser(name){
+    this.setState(state => ({
+      userCharacter:name
+    }))};
+
+  assignNpc(name){
+    this.setState(state => ({
+      npcCharacter:name
+    }))};
   render(){
+    const step = this.state.step;
+    let game;
+    if (step === 'characterSelect') {
+      game = <CharacterSelect
+      characterObject={characterObject}
+      assignUser={(e) => this.assignUser(e)}
+      assignNpc={(e) => this.assignNpc(e)}
+      userCharacter={this.state.userCharacter}
+      npcCharacter={this.state.npcCharacter}
+      />
+    } else if (step === 'arena'){
+      game = <Arena/>
+    }
 
     return(
     <div className="App">
         <div className="container">
         <Header/>
-        <Scroll/>
+
         <div className="row">
-        <CharacterSelect
-        characterObject={characterObject}
-        />
+        {game}
         </div>
-        <Arena/>
     </div>
   </div>
     )

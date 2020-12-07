@@ -50,7 +50,12 @@ console.log(this.state.test)
           character={characters}
           name={characters.display}
           img={characters.imgSrc}
-          data={characters.data}/>
+          data={characters.data}
+          assignUser={(e) => this.props.assignUser(e)}
+          assignNpc={(e) => this.props.assignNpc(e)}
+          userCharacter={this.props.userCharacter}
+          npcCharacter={this.props.npcCharacter}
+          />
                         ))
                         }
 
