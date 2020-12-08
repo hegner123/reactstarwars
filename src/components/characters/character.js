@@ -21,23 +21,6 @@ class Characters extends Component{
       }
     };
 render(){
-
-
-
-// doStuff(this.props.characterObject)
-
-// function doStuff(character){
-//   let x;
-//   console.log(character)
-// for (x in character) {
-//   console.log(character[x].display)
-// }
-
-// }
-
-console.log(this.state.test)
-
-
   return(
    <div className="container">
           <div className="row">
@@ -55,6 +38,8 @@ console.log(this.state.test)
           assignNpc={(e) => this.props.assignNpc(e)}
           userCharacter={this.props.userCharacter}
           npcCharacter={this.props.npcCharacter}
+          passImg={(e) => this.props.passImg(e)}
+          clearImg={(e)=> this.props.clearImg(e)}
           />
                         ))
                         }

@@ -1,6 +1,7 @@
 
 // Math.floor(Math.random() * 11); 
 
+
 export let lukeSkywalker = {
   data: "lukeSkywalker",
   hp: 120,
@@ -8,7 +9,7 @@ export let lukeSkywalker = {
   attack: 1,
   counterAttack: 15,
   display: "Luke Skywalker",
-  imgSrc:"../src/images/coolCharacters/lukeSkywalker-big.jpg",
+  imgSrc:"../coolCharacters/lukeSkywalker-big.jpg",
 }
 // images/coolCharacters/lukeSkywalker-big.jpg
 export let bobbaFett = {
@@ -18,7 +19,7 @@ export let bobbaFett = {
   attack: 2,
   counterAttack: 1,
   display: "Bobba Fett",
-  imgSrc:"../src/images/coolCharacters/bobbaFett-big.jpg",
+  imgSrc:"../coolCharacters/bobbaFett-big.jpg",
 }
 
 export let chewbaca = {
@@ -28,7 +29,7 @@ export let chewbaca = {
   attack: 5,
   counterAttack: 10,
   display: "Chewbaca",
-  imgSrc:"../src/images/coolCharacters/chewbaca-big.jpg"
+  imgSrc:"../coolCharacters/chewbaca-big.jpg"
 }
 
 export let darthVader = {
@@ -38,7 +39,7 @@ export let darthVader = {
   attack: 3,
   counterAttack: 5,
   display: "Darth Vader",
-  imgSrc:"https://www.sideshow.com/storage/product-images/400103/darth-vader_star-wars_silo.png",
+  imgSrc:"../coolCharacters/darthVader-big.jpg",
 }
 
  const characterObject ={

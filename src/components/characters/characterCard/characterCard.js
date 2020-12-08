@@ -16,20 +16,28 @@ class CharacterCard extends Component{
       let button;
       if (!this.props.userCharacter){
         button =
-        <button onClick={() => this.props.assignUser(this.props.name)}>
-        <h3 className="text-white text-center">{this.props.name}</h3>
-        </button>
+        <div  className="character-card" onClick={() => this.props.assignUser(this.props.data)}>
+        <img alt={this.props.name} src={this.props.img} className="card-img pointer"
+        onPointerEnter={() => this.props.passImg(this.props.img)}
+        onPointerLeave={() => this.props.clearImg()}
+        />
+        <h4 className="text-white text-center">{this.props.name}</h4>
+        </div>
       }else{
         button =
-        <button onClick={() => this.props.assignNpc(this.props.name)}>
-        <h3 className="text-white text-center">{this.props.name}</h3>
-        </button>
+        <div className="character-card" onClick={() => this.props.assignNpc(this.props.data)}>
+        <img alt={this.props.name} src={this.props.img} className="card-img pointer"
+        onPointerEnter={() => this.props.passImg(this.props.img)}
+        onPointerLeave={() => this.props.clearImg()}
+        />
+        <h4 className="text-white text-center">{this.props.name}</h4>
+        </div>
       }
+
+       
+
   return(
     <div className="col-md-6 col-3">
-      <div className="character-card p-5">
-        <img alt={this.props.name} src={this.props.img} className="img-fluid"/>
-      </div>
       {button}
     </div>
   )

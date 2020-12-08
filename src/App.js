@@ -6,7 +6,6 @@ import characterObject from './data/characters'
 import './style.css'
 import './App.css';
 
-
 class App extends Component{
   constructor(props) {
     super(props);
@@ -31,9 +30,13 @@ class App extends Component{
     this.setState(state => ({
       npcCharacter:name
     }))};
+
+
   render(){
+
     const step = this.state.step;
     let game;
+    // conditional rendering
     if (step === 'characterSelect') {
       game = <CharacterSelect
       characterObject={characterObject}
@@ -50,7 +53,6 @@ class App extends Component{
     <div className="App">
         <div className="container">
         <Header/>
-
         <div className="row">
         {game}
         </div>
