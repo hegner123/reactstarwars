@@ -1,0 +1,125 @@
+.action-display {
+  position: relative;
+  font-size: 2rem;
+  display: block;
+  height: 4rem;
+  top: -6rem;
+  margin-left: -3rem;
+}
+
+.arena-character {
+  display:flex;
+  justify-content: center;
+}
+
+.attack-button-div {
+  align-self: center;
+}
+
+.footer {
+  max-height:3rem;
+  height:3rem;
+  display:block;
+}
+
+.header {
+  color: white;
+  font-size:3rem;
+}
+
+.char-display {
+  min-height: 600px;
+}
+
+.box {
+  color:#ffffff;
+  list-style: none;
+  font-size:1rem;
+  padding:1rem;
+  background:black;
+  border:solid white 1px;
+}
+
+.box-box {
+  display: block;
+  max-height: 2rem;
+}
+
+.char-text {
+  color: white;
+  font-size:26px;
+}
+
+.user-chara-sel {
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+.vs-img-div {
+  align-self: center;
+}
+
+.character-select-button {
+  padding: 20px;
+}
+
+.versus-text {
+  glyph-orientation-vertical: auto;
+}
+
+.attack-button {
+  padding: 20px;
+  background: red;
+}
+
+.win {
+  color: white;
+}
+
+.loss {
+  color: white;
+}
+
+.reset-button {
+  padding: 1rem;
+  position: absolute;
+  bottom:2rem;
+}
+
+.scoreboard {
+  padding: 1px;
+  background: black;
+  border: solid 5px white;
+  height: 15rem;
+}
+
+/* .user-hp {
+  position: absolute;
+  width: 100%
+}
+
+.comp-hp {
+  position: absolute;
+  width: 100%
+} */
+
+/* .comp-hp-meter{
+  width:100%;
+  height: inherit;
+}
+
+.user-hp-meter {
+  width:100%;
+  height: inherit;
+} */
+
+.user-img-text {
+  color:white;
+}

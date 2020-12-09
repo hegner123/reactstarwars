@@ -19,6 +19,7 @@ class App extends Component{
     }
     this.assignUser = this.assignUser.bind(this);
     this.assignNpc = this.assignNpc.bind(this);
+    this.changeGameState = this.changeGameState.bind(this);
   }
 
   assignUser(name){
@@ -29,7 +30,17 @@ class App extends Component{
   assignNpc(name){
     this.setState(state => ({
       npcCharacter:name
-    }))};
+    }))
+    this.changeGameState()
+  };
+
+    changeGameState(){
+      if (this.state.userCharacter.length > 1 && this.state.npcCharacter.length < 1){
+        this.setState(state => ({
+          step:'arena'
+        }))
+      }
+    }
 
 
   render(){
@@ -46,7 +57,11 @@ class App extends Component{
       npcCharacter={this.state.npcCharacter}
       />
     } else if (step === 'arena'){
-      game = <Arena/>
+      game = <Arena
+      userCharacter={this.state.userCharacter}
+      npcCharacter={this.state.npcCharacter}
+      characterObject={characterObject}
+      />
     }
 
     return(
