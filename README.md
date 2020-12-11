@@ -1,10 +1,10 @@
 # React Star Wars
 An updated version of Star Wars RPG Battle made using react. The purpose is to explore new concepts in React and polish existing skills with javascript.
 
-# Updates
+## Updates
 This is a non-commercial endavor for skill building.
 
-# Technology Used
+## Technology Used
 Made using create-react-app. 
 
 Additional packages include:
