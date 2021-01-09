@@ -11,7 +11,8 @@ class CharacterSelect extends Component{
     super(props) 
 this.state={
   userCharacterImg:'',
-  npcCharacterImg:''
+  npcCharacterImg:'',
+  defeatedCharacters:[]
 }
 this.passImg = this.passImg.bind(this);
 this.clearImg = this.clearImg.bind(this);
@@ -56,6 +57,7 @@ this.clearImg = this.clearImg.bind(this);
     npcCharacter={this.props.npcCharacter}
     passImg={(e) => this.passImg(e)}
     clearImg={(e)=> this.clearImg(e)}
+    defeatedCharacters={this.props.defeatedCharacters}
     />
     </div>
     <Preview

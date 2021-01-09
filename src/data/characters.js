@@ -6,7 +6,7 @@ export let lukeSkywalker = {
   data: "lukeSkywalker",
   hp: 120,
   ratio: 1.2,
-  attack: 1,
+  attack: 100,
   counterAttack: 15,
   display: "Luke Skywalker",
   imgSrc:"../coolCharacters/lukeSkywalker-big.jpg",

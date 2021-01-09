@@ -6,18 +6,38 @@ import CharacterCard from './characterCard/characterCard'
 class Characters extends Component{
   constructor(props) {
     super(props);
-    let x;
     const npcCharacters = this.props.characterObject
-    let testArray =[]
+    const defeatedCharacters = this.props.defeatedCharacters;
+    let characterArrary =[]
+    let x;
+    let y;
     for (x in npcCharacters) {
-      testArray.push(npcCharacters[x])
+      let character = npcCharacters[x].data;
+      // console.log( "source " + character)
+      if (defeatedCharacters.length > 0){
+        for (y in defeatedCharacters){
+          // console.log("check " + defeatedCharacters[y])
+            if (character !== defeatedCharacters[y]){
+              // let value = character !== defeatedCharacters[y];
+              // console.log("console.log(character !== defeatedCharacters[y]) = " + value)
+              characterArrary.push(npcCharacters[x])
+          } else {
+            // let value2 = character !== defeatedCharacters[y];
+            // console.log("console.log(character !== defeatedCharacters[y]) = " + value2)
+          }
+        }
+      } else {
+        characterArrary.push(npcCharacters[x])
+      }
+
+      console.log(characterArrary)
     }
     this.state = {
       userCharacter:'',
       npcCharacter:'',
-      characters:[ npcCharacters.bobbaFett.display, npcCharacters.chewbaca.display, npcCharacters.darthVader.display, npcCharacters.lukeSkywalker.display],
       data:[npcCharacters],
-      test:testArray
+      defeatedCharacters:defeatedCharacters,
+      characterArrary:characterArrary
       }
     };
 render(){
@@ -26,9 +46,9 @@ render(){
           <div className="row">
             <div className="col-12">
               <div className="row">
-              {this.state.test.map(characters => (
+              {this.state.characterArrary.map(characters => (
 
-          <CharacterCard 
+          <CharacterCard
           key={characters.data}
           character={characters}
           name={characters.display}

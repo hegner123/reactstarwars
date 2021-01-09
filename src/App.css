@@ -1,5 +1,5 @@
 body{
-  background-image:url(./images/stars.jpg)
+  background-image:url(./stars.jpg)
 }
 
 li,p,h1,h2,h3,h4,h5,h6 {
@@ -135,12 +135,10 @@ li,p,h1,h2,h3,h4,h5,h6 {
 }
 
 .comp-hp-meter{
-  width:100%;
   height: inherit;
 }
 
 .user-hp-meter {
-  width:100%;
   height: inherit;
 }
 

@@ -16,10 +16,14 @@ class App extends Component{
     opponents: 4,
     wins:0,
     losses:0,
+    defeatedCharacters:[]
     }
     this.assignUser = this.assignUser.bind(this);
     this.assignNpc = this.assignNpc.bind(this);
-    this.changeGameState = this.changeGameState.bind(this);
+    this.clearCharacters = this.clearCharacters.bind(this);
+    this.changeGameStateArena = this.changeGameStateArena.bind(this);
+    this.changeGameStateSelect = this.changeGameStateSelect.bind(this);
+    this.defeatCharacters = this.defeatCharacters.bind(this);
   }
 
   assignUser(name){
@@ -31,15 +35,36 @@ class App extends Component{
     this.setState(state => ({
       npcCharacter:name
     }))
-    this.changeGameState()
+    this.changeGameStateArena()
   };
 
-    changeGameState(){
+    changeGameStateArena(){
       if (this.state.userCharacter.length > 1 && this.state.npcCharacter.length < 1){
         this.setState(state => ({
           step:'arena'
         }))
       }
+    }
+    changeGameStateSelect(){
+        this.setState(state => ({
+          step:'characterSelect'
+        }))
+        this.clearCharacters()
+      }
+
+    clearCharacters(){
+      this.setState(state =>({
+        userCharacter:'',
+        npcCharacter:''
+      }))
+    }
+    defeatCharacters(value){
+      console.log("defeatCharacters")
+      let array = this.state.defeatedCharacters;
+      array.push(value);
+      this.setState(state => ({
+        defeatedCharacters:array
+      }))
     }
 
 
@@ -55,12 +80,15 @@ class App extends Component{
       assignNpc={(e) => this.assignNpc(e)}
       userCharacter={this.state.userCharacter}
       npcCharacter={this.state.npcCharacter}
+      defeatedCharacters={this.state.defeatedCharacters}
       />
     } else if (step === 'arena'){
       game = <Arena
       userCharacter={this.state.userCharacter}
       npcCharacter={this.state.npcCharacter}
       characterObject={characterObject}
+      changeGameStateSelect ={() => this.changeGameStateSelect()}
+      addDefeatedCharacter ={(e) => this.defeatCharacters(e)}
       />
     }
 

@@ -7,10 +7,7 @@
   margin-left: -3rem;
 }
 
-.arena-character {
-  display:flex;
-  justify-content: center;
-}
+
 
 .attack-button-div {
   align-self: center;
@@ -53,13 +50,6 @@
 .user-chara-sel {
   opacity: 0.5;
 }
-
-
-
-
-
-
-
 
 
 .vs-img-div {
